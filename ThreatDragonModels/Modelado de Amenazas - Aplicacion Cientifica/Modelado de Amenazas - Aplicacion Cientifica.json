@@ -62,8 +62,8 @@
                 "text": "User"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -160,9 +160,34 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "1c136139-dd28-4775-9360-ddcf325b5d87",
+                  "title": "Suplantación de identidad del usuario",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Un atacante podría suplantar la identidad de un usuario legítimo para acceder a la aplicación y realizar acciones no autorizadas.",
+                  "mitigation": "Implementar mecanismos de autenticación robusta, utilizar contraseñas seguras y, cuando sea posible, autenticación multifactor. Validar la identidad del usuario antes de permitir el acceso a los recursos de la aplicación.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -767,7 +792,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Boundary",
-              "name": "Processed Scientific Boundary",
+              "name": "Internal Network Boundary",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
@@ -775,7 +800,7 @@
               "containedElements": []
             },
             "labels": [
-              "Processed Scientific Boundary"
+              "Internal Network Boundary"
             ],
             "id": "20ab20cd-79a9-488b-a9f6-747cd219d9d8",
             "source": {
@@ -1314,6 +1339,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 1
   }
 }
