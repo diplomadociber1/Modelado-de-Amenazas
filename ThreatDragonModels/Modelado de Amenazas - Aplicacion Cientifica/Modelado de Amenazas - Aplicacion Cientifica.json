@@ -324,8 +324,8 @@
                 "text": "API\nGateway"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -422,12 +422,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "f3720fe5-3581-48c5-ad70-bfd8185c2056",
+                  "title": "Denegación de servicio contra el API Gateway",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service / Denegación de servicio",
+                  "description": "Un atacante podría enviar un volumen elevado de solicitudes al API Gateway con el objetivo de consumir sus recursos y provocar la indisponibilidad de los servicios de la aplicación.",
+                  "mitigation": "Implementar mecanismos de limitación de solicitudes (rate limiting), establecer cuotas por cliente, monitorear el tráfico y configurar mecanismos de detección y respuesta ante patrones anómalos o excesivos de solicitudes.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -561,8 +583,8 @@
                 "text": "Data\nProcessor"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -659,12 +681,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "c811c6cd-01b7-4838-8561-cce4368e9718",
+                  "title": "Manipulación de datos durante el procesamiento",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering / Manipulación",
+                  "description": "Un atacante podría modificar los datos durante su procesamiento, provocando que la información científica resultante sea alterada o pierda su integridad.",
+                  "mitigation": "Implementar controles de integridad de los datos, controles de acceso sobre el procesamiento, validación de la información recibida y registros de las operaciones realizadas para detectar modificaciones no autorizadas.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -1250,16 +1294,19 @@
                 "text": "Processed\nScientific Data"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -1343,7 +1390,6 @@
               ]
             },
             "id": "1a3a6cba-2109-4d0b-ba0d-4fc02eca7c94",
-            "zIndex": 11,
             "data": {
               "type": "tm.Store",
               "name": "Processed\nScientific Data",
@@ -1351,13 +1397,33 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "c67860a9-e87c-4ec4-8e66-1949993e355f",
+                  "title": "Divulgación no autorizada de datos científicos",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure / Brecha de información",
+                  "description": "Los datos científicos procesados podrían ser accedidos o divulgados por personas o aplicaciones que no tengan autorización para consultar dicha información.",
+                  "mitigation": "Implementar controles de acceso basados en roles y permisos, restringir el acceso a los datos únicamente a usuarios y aplicaciones autorizados, proteger la información almacenada y registrar los accesos para detectar actividades no autorizadas.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             }
           }
         ],
@@ -1366,6 +1432,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 3
+    "threatTop": 6
   }
 }
