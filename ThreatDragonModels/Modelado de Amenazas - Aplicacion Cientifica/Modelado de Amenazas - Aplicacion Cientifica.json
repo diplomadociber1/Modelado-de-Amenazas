@@ -20,32 +20,33 @@
         "version": "2.6.2",
         "cells": [
           {
-            "position": {
-              "x": 617,
-              "y": 85
-            },
-            "size": {
-              "width": 128,
-              "height": 60
-            },
-            "attrs": {
-              "label": {
-                "text": "Trust Boundary"
-              }
-            },
-            "visible": true,
-            "shape": "trust-boundary-box",
-            "id": "e72c09e8-b2c8-4e25-9937-95ad4f4cf11c",
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
             "zIndex": -1,
+            "connector": "smooth",
             "data": {
-              "type": "tm.BoundaryBox",
-              "name": "Trust Boundary",
+              "type": "tm.Boundary",
+              "name": "Internet Boundary",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [],
               "containedElements": []
-            }
+            },
+            "labels": [
+              "Internet Boundary"
+            ],
+            "id": "483f6209-35f5-443b-a198-11f6ab71b414",
+            "source": {
+              "x": 640,
+              "y": 20
+            },
+            "target": {
+              "x": 640,
+              "y": 530
+            },
+            "vertices": []
           },
           {
             "position": {
@@ -68,6 +69,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -151,7 +153,6 @@
               ]
             },
             "id": "55748a8a-3728-47ae-ae0b-44241fd59172",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "User",
@@ -185,6 +186,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -268,7 +270,6 @@
               ]
             },
             "id": "473f6438-8b06-4fcc-9fef-32c1d07e24de",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Web Browser",
@@ -305,6 +306,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -388,7 +390,6 @@
               ]
             },
             "id": "165969fb-b080-4b50-a637-842c36eebb22",
-            "zIndex": 3,
             "data": {
               "type": "tm.Process",
               "name": "API\nGateway",
@@ -425,6 +426,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -508,7 +510,6 @@
               ]
             },
             "id": "c7eabd13-9ac6-4713-9452-e86cac808c7e",
-            "zIndex": 4,
             "data": {
               "type": "tm.Actor",
               "name": "Third Party\nApplications",
@@ -523,7 +524,7 @@
           },
           {
             "position": {
-              "x": 710,
+              "x": 720,
               "y": 370
             },
             "size": {
@@ -542,6 +543,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -625,7 +627,6 @@
               ]
             },
             "id": "01330367-9dac-4c9a-ae56-a07f97c4fb41",
-            "zIndex": 5,
             "data": {
               "type": "tm.Process",
               "name": "Data\nProcessor",
@@ -662,6 +663,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 6,
             "ports": {
               "groups": {
                 "top": {
@@ -745,7 +747,6 @@
               ]
             },
             "id": "5b0219fe-eee3-4b90-8597-9997259b46d1",
-            "zIndex": 6,
             "data": {
               "type": "tm.Actor",
               "name": "Processed\nScientific Data",
@@ -757,6 +758,35 @@
               "providesAuthentication": false,
               "threats": []
             }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 7,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "Trust Boundary"
+            ],
+            "id": "20ab20cd-79a9-488b-a9f6-747cd219d9d8",
+            "source": {
+              "x": 940,
+              "y": 20
+            },
+            "target": {
+              "x": 940,
+              "y": 520
+            },
+            "vertices": []
           }
         ],
         "description": "Diagrama de Aplicación"
